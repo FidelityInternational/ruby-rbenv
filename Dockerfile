@@ -6,7 +6,7 @@ RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommend
 
 # use rbenv understandable version
 ARG RUBY_VERSION
-ENV RUBY_VERSION=${RUBY_VERSION:-2.3.8}
+ENV RUBY_VERSION=${RUBY_VERSION:-2.5.8}
 ENV PATH=/root/.rbenv/bin:/root/.rbenv/shims:$PATH
 
 RUN locale-gen "en_US.UTF-8"
@@ -21,7 +21,7 @@ COPY scripts/rbenv-setup.sh /
 RUN bash /rbenv-setup.sh $RUBY_VERSION
 RUN rm -fv /rbenv-setup.sh
 
-RUN curl -L https://github.com/mikefarah/yq/releases/download/1.14.0/yq_linux_amd64 -o yq && chmod +x yq && mv yq /usr/local/bin/yq
+RUN curl -L https://github.com/mikefarah/yq/releases/download/3.3.0/yq_linux_amd64 -o yq && chmod +x yq && mv yq /usr/local/bin/yq
 RUN ln -s /usr/local/bin/yq /usr/local/bin/yaml
 
 COPY scripts/init.sh /init.sh

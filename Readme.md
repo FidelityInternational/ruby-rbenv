@@ -1,4 +1,4 @@
-Ubuntu LTS Trusty (14.04) based image with [rbenv](https://github.com/sstephenson/rbenv) and it's [ruby-build](https://github.com/rbenv/ruby-build) plugin.
+Ubuntu LTS Bionic based image with [rbenv](https://github.com/sstephenson/rbenv) and it's [ruby-build](https://github.com/rbenv/ruby-build) plugin.
 
 # Build exaples
 
