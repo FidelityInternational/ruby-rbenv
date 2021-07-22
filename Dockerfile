@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 
-ENV PACKAGES "locales git curl ca-certificates build-essential libreadline-dev zlib1g-dev unzip libssl1.0-dev lsb-release"
+ENV PACKAGES "locales git curl ca-certificates build-essential libreadline-dev zlib1g-dev zip unzip libssl1.0-dev lsb-release"
 
 RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommends ${PACKAGES} && apt-get clean
 
