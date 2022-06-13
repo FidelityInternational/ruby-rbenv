@@ -6,7 +6,7 @@ RUN apt-get clean && apt-get update && apt-get install -y --no-install-recommend
 
 # use rbenv understandable version
 ARG RUBY_VERSION
-ENV RUBY_VERSION=${RUBY_VERSION:-2.5.8}
+ENV RUBY_VERSION=${RUBY_VERSION:-2.5.9}
 ENV PATH=/root/.rbenv/bin:/root/.rbenv/shims:$PATH
 
 RUN locale-gen "en_US.UTF-8"
